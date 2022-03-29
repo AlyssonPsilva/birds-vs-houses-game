@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://kit.fontawesome.com/785bcfb039.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@400;700&display=swap" rel="stylesheet">
+
+	<title>Birds VS Houses Game</title>
+</head>
+<body>
+	
+	<div id="game-container">
+		<canvas id="collision-canvas"></canvas>
+		<canvas id="game-screen">
+		<img id="gamebg"src="./assets/gamebg.png" alt="game background">	
+		<img id="bird" src="./assets/bird.png" alt="bird">
+		<img id="bat" src="./assets/bat.png" alt="bat">
+		<img id="explosion" src="./assets/explosion.png" alt="explosion">
+		<img id="eggExplosion" src="./assets/eggExplosion.png" alt="eggExplosion">
+		<img id="egg" src="./assets/egg.png" alt="egg">
+		<img id="heart" src="./assets/heart.png" alt="heart">
+		<img id="bullethole" src="./assets/bullethole.png" alt="bullet hole">
+
+
+		</canvas>
+		<img class="pause-btn menu-button disabled"src="./assets/menu/pause-solid.png" alt="pause button">
+		<div class="game-menu">
+			<div class="home menu">
+				<h1><span id="birds-tittle-span">Birds</span><br><span id="vs-tittle-span">VS</span><br><span id="houses-tittle-span">Houses</span></h1>
+					<div class="options">
+						<div class="menu-button">
+						<img src="./assets/menu/circle-play-solid.png" alt="play-button">
+						<p>Play Game</p>
+						</div>
+						<div class="menu-button">
+						<img src="./assets/menu/skull-solid.png" alt="rank-button">
+						<p>Play Hard Mode</p>
+						</div>
+						<div class="menu-button">
+						<img src="./assets/menu/earlybirds-brands.png" alt="credits-button">
+						<p>Credits</p>
+						</div>
+				</div>
+				<p id="dev-text">Developed By:<a id="dev-link"href="https://github.com/AlyssonPsilva" target="_blank">Jose Alysson P.S</a></p>
+			</div>
+			<div class="pause menu disabled">
+				<h2>PAUSED</h2>
+				<div class="options">
+					<div class="menu-button">
+						<img src="./assets/menu/x-solid.png" alt="back-button">
+						<p>Back to Menu</p>
+					</div>
+					<div class="menu-button">
+						<img src="./assets/menu/circle-play-solid.png" alt="continue-button">
+						<p>Continue</p>
+					</div>
+					<div class="menu-button">
+						<img src="./assets/menu/medal-solid.png" alt="statistics-button">
+						<p> Show Statistics</p>
+			
+					</div>
+				</div>
+			</div>
+			<div class="statistics menu disabled">
+				<p class="statistics score-text"></p>
+				<p class="statistics shots-text"></p>
+				<p class="statistics accuracy-text"></p>
+				<div class="menu-button">
+						<img src="./assets/menu/backarrow.png" alt="back-button">
+						<p>Back</p>
+					</div>
+			</div>
+			<div class="game-over menu disabled">
+					<h2>Game Over</h2>
+					<h3>Your house is destroyed</h3>
+				<div class="options">
+					<div class="menu-button">
+						<img src="./assets/menu/backarrow.png" alt="back-button">
+						<p>Back to Menu</p>
+					</div>
+					<div class="menu-button">
+						<img src="./assets/menu/circle-play-solid.png" alt="continue-button">
+						<p>Try Again</p>
+					</div>
+					<div class="menu-button">
+						<img src="./assets/menu/medal-solid.png" alt="statistics-button">
+						<p> Show Statistics</p>
+			
+					</div>
+				</div>	
+			</div>
+			<div class="credits-div disabled">
+				<p>Game Development and Game Design by: <a href="https://github.com/AlyssonPsilva" target="_blank">Jose Alysson P.S</a></p>
+				<p>Game Background and house art by: <a href="https://swapnilrane24.itch.io/green-background" target="_blank">MadFireOn</a> and <a href="https://www.youtube.com/user/darkskeletontuts" target="_blank">Chris Tutorials</a></p>
+				<p>Birds Sprite arts by: <a href="https://bevouliin.com/" target="_blank">Bevouliin</a></p>
+				<p>Game Musics by: <a href="https://juhanijunkala.com" target="_blank">Juhani Junkala</a> and <a href="https://soundcloud.com/cleytonkauffman" target="_blank">Cleyton Kauffman</a></p>
+				<p>Sound Effects by: <a href="https://soundbible.com/1262-10-Guage-Shotgun.html" target="_blank">Mike Koenig</a> and <a href=" https://www.soundcloud.com/virix" target="_blank">ViRiX Dreamcore (David Mckee)</a></p>
+				<p>Extra Game assets by: <a href="https://opengameart.org/" target="_blank">Open Game Art.Org</a></p>
+				<div class="menu-button">
+						<img src="./assets/menu/backarrow.png" alt="back-button">
+						<p>Back</p>
+					</div>
+			</div>
+		</div>
+	
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

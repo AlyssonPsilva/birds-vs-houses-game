@@ -1,0 +1,257 @@
+:root{
+
+--dark-sienna: #2b0504;
+--lava: #C42021;
+--indigo-dye: #083D77;
+
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+#game-container{
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+
+}
+.pause-btn{
+	position: absolute;
+	top: 13px;
+	left: calc(50% + 150px);
+	width: 30px;
+	height: 20px;
+	cursor: pointer;
+}
+
+canvas > img{
+	display: none;
+}
+.playing{
+	cursor: url('./assets/cursor.cur'), auto;
+}
+#game-screen{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+}
+#collision-canvas{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+}
+.game-menu{
+	background-color: rgba(255, 255, 255, .70);
+	width: 50%;
+	height: 50%;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.home h1{
+	font-family: 'Rowdies', cursive;
+	text-align: center;
+	margin-top: 20px;
+	font-weight: 700;
+
+}
+#birds-tittle-span{
+	color: var(--indigo-dye);
+}
+#vs-tittle-span{
+	color: var(--lava);
+	font-size: 20px;
+}
+.houses-tittle-span{
+	color: var(--dark-sienna);
+}
+.home p{
+	margin-top: 10px;
+}
+.home > div{
+	display: flex;
+}
+
+.menu-button{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+
+}
+.menu-button img{
+	opacity: 0.3;
+	height: 3rem;
+}
+
+.menu-button p{
+	font-family: 'Rowdies', cursive;
+	text-align: center;
+	font-weight: 400;
+	color: var(--dark-sienna);
+	opacity: 0.3;
+	margin-top: 10px;
+}
+.menu-button:hover > img {
+	opacity: 1;
+	transition-duration: 0.5s;
+	transform: scale(1.3);
+	cursor: pointer;
+}
+.menu-button:hover > p{
+	opacity: 1;
+	transition-duration: 0.5s;
+	transform: scale(1.2);
+	cursor: pointer;
+}
+#dev-link{
+	text-decoration: none;
+	color: var(--indigo-dye);
+	font-family: 'Rowdies', cursive;
+	text-align: center;
+	font-weight: 700;
+
+}
+#dev-text{
+	color: var(--dark-sienna);
+	font-family: 'Rowdies', cursive;
+	text-align: center;
+	font-weight: 700;
+}
+
+.game-over{
+	display: flex;
+	flex-direction: column;
+
+}
+.options{
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+.menu{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: space-evenly;
+	align-items: center;
+}
+h2{
+	font-family: 'Rowdies', cursive;
+	text-align: center;
+	margin-top: 20px;
+	font-weight: 700;
+	color: var(--lava);
+}
+h3{
+	font-family: 'Rowdies', cursive;
+	text-align: center;
+	margin-top: 20px;
+	font-weight: 700;
+	color: var(--lava);
+}
+.pause{
+	flex-direction: column;
+}
+.pause h2{
+	color: var(--indigo-dye);
+}
+.statistics{
+	flex-direction: column;
+	padding-top: 20px;
+}
+.statistics p{
+	color: var(--indigo-dye);
+	font-size: large;
+	font-weight: 700;
+}
+.statistics > div p{
+	color: var(--dark-sienna);
+}
+.credits-div{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	gap: 10px;
+}
+.credits-div p{
+	color: var(--dark-sienna);
+	font-weight: 800;
+
+}
+.credits-div a{
+	color: var(--indigo-dye);
+	font-weight: 700;
+	text-decoration: none;
+}
+.disabled{
+	display: none;
+}
+@media screen and (max-width: 768px){
+	h1{
+		font-size: x-large;
+	}
+	.game-menu{
+		width: 80%;
+		height: 55%;
+	}
+	.pause-btn{
+		left: calc(50% + 120px);
+		width: 20px;
+	}
+	.menu-button img{
+		height: 2rem;
+	}
+	.menu-button p{
+		font-size: small;
+	}
+	#dev-text{
+		font-size: small;
+	}
+	.credits-div{
+		align-items: initial;
+		gap: 5px;
+	}
+	.credits-div p{
+		font-size: small;
+	}
+	.credits-div a{
+		font-size: small;
+}
+}
